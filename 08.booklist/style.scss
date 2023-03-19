@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #080809;
+    background: linear-gradient(blueviolet, rgb(82, 5, 14));
+    background-repeat: none;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 80%;
+    padding: 10px;
+    height: 600px;
+    color: white;
+
+    input {
+        width: 100%;
+        outline: none;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 4px;
+        margin-bottom: 20px;
+    }
+
+    .table {
+        background: crimson;
+        width: 100%;
+
+        &-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+    }
+
+    #book-list {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        color: #000;
+        overflow: hidden;
+        word-wrap: break-word;
+
+        > section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    .btn {
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        background: deeppink;
+        margin-bottom: 20px;
+    }
+}
