@@ -1,0 +1,58 @@
+:root {
+    --primary-color: #ccc;
+    --primary-label: black;
+    --secndary-color: white;
+    --white-ball: white;
+    --black-ball: black;
+}
+
+body {
+    background: var(--primary-color);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#switch {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+
+    &:checked + label {
+        background: var(--secndary-color);
+    }
+
+    &:checked + label::after {
+        left: calc(100% - 5px);
+        transform: translateX(-100%);
+        background: var(--black-ball);
+    }
+}
+
+label {
+    display: block;
+    width: 100px;
+    height: 50px;
+    background: var(--primary-label);
+    border-radius: 100px;
+    position: relative;
+    transition: .5s;
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        width: 40px;
+        height: 40px;
+        border-radius: 70px;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        background: var(--white-ball);
+        transition: .5s;
+    }
+
+    &:active::after {
+        width: 60px;
+    }
+}
