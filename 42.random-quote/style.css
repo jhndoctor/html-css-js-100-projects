@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn {
+  background: #fdbb11;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.quote-container {
+  padding: 5rem;
+}
+.quote-container #quoteOutput {
+  font-size: 2rem;
+  margin: 2rem;
+  line-height: 50px;
+  letter-spacing: 2px;
+}
+.quote-container #authorOutput {
+  font-size: 1.2rem;
+  text-align: right;
+  margin-top: 3rem;
+}
+.quote-container small, .quote-container span {
+  animation: anime 1s ease-out;
+}
+
+@keyframes anime {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

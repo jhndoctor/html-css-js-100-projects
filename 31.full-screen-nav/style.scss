@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.25rem;
+    background: #5c6fda;
+    clip-path: circle(20px at calc(100vw - 5vw) 31px);
+    transition: clip-path .5s;
+    list-style: none;
+
+    li {
+        position: relative;
+        z-index: 5;
+    }
+
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: rgb(47, 45, 45);
+        width: 120px;
+        padding: 5px;
+        display: inline-block;
+    }
+
+    .btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #5c6fda;
+        position: absolute;
+        left: calc(100vw - 5vw);
+        top: 31px;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+
+        > span {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            border: 2px solid white;
+            margin-bottom: 1px;
+        }
+    }
+
+    .highlight {
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 0;
+        background: white;
+        transition: transform .3s;
+    }
+}
+
+.img-container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .img {
+        width: 250px;
+        height: 250px;
+        margin: 20px;
+
+        &.img-one {
+            background-image: url(images/atharva-tulsi-6ftd4RgUdnk-unsplash.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        &.img-two {
+            background-image: url(images/6536956.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}
+
+.container {
+    padding: 0 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    article {
+        padding: 20px 0;
+
+        > h2 {
+            text-transform: uppercase;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .para {
+            max-width: 700px;
+            line-height: 22px;
+            color: rgb(79, 77, 77);
+            padding: 20px;
+        }
+    }
+}

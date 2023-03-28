@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.content {
+    max-width: 600px;
+    width: 100%;
+    background: rgba(13, 12, 12, .786);
+    padding: 3em 4em;
+    border-radius: 10px;
+    margin-top: 20px;
+
+    .title {
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+    .accordion-item {
+        width: 90%;
+
+        &-header {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 3.5em;
+            pointer-events: all;
+        }
+
+        &-title {
+            font-size: 1.125rem;
+            color: rgba(255,255,255, .758);
+
+        }
+
+        .icon {
+            width: 34px;
+            height: 34px;
+            border: 2px solid;
+            color: #f8f9fc;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::before, &::after {
+                content: "";
+                width: 14px;
+                height: 2px;
+                background: white;
+                border-radius: 20px;
+                position: absolute;
+                transition: .3s ease-in-out;
+            }
+
+            &::after {
+                width: 2px;
+                height: 14px;
+            }
+        }
+
+        &-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s ease-out;
+
+            &-content {
+                padding-top: .5em;
+                line-height: 1.3;
+                color: #fff;
+                width: 90%;
+                text-align: left;
+            }
+        }
+    }
+
+    .divider {
+        width: 100%;
+        height: 1px;
+        background: #d8d9ef;
+        margin: 10px 0;
+    }
+}
