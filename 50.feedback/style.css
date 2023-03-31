@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: rgb(26, 25, 25);
+  overflow: hidden;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel-container {
+  width: 700px;
+  padding: 30px;
+  background: #1f1c1c;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.ratings-container {
+  position: relative;
+  margin: 10px 0;
+}
+.ratings-container .container {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ratings-container .rating {
+  flex: 1;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.ratings-container .rating:hover, .ratings-container .rating.active {
+  background: #ccc;
+  border-radius: 4px;
+  transition: 1s ease;
+}
+.ratings-container .icon {
+  font-size: 5rem;
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 13px 30px;
+  cursor: pointer;
+  background: white;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+.heart {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

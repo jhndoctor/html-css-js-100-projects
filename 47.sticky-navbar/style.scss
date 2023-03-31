@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    color: #222;
+    padding-bottom: 50px;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #222;
+    color: #fff;
+    transition: .3s ease-in-out;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        padding: 7px 20px;
+    }
+
+    &.active {
+        background: #fff;
+        color: #000;
+
+        + .hero::before {
+            background: none;
+        }
+    }
+}
+
+.hero {
+    height: 100vh;
+    background: url(https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    z-index: -2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: .3s ease-in-out;
+    margin-bottom: 20px;
+
+    h1 {
+        color: #fff;
+        font-size: 46px;
+        margin: -20px 0 20px;
+    }
+
+    p {
+        max-width: 600px;
+        color: #fff;
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 22px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.7);
+        z-index: -1;
+    }
+}
+
+.content-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(244, 242, 242);
+
+    .content {
+        margin: 20px;
+        max-width: 600px;
+        padding: 20px;
+        background: rgb(230, 229, 229);
+
+        h2 {
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        p {
+            font-family: sans-serif;
+            line-height: 24px;
+        }
+    }
+}

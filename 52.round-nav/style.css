@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.navbar-wrapper {
+  height: 100vh;
+  background: #eccc68;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-wrapper .navbar {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  position: relative;
+  background: #fd7272;
+  transform: scale(0) rotate(-180deg);
+  transition: transform 0.5s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-wrapper .navbar-link {
+  position: absolute;
+}
+.navbar-wrapper .navbar-link i {
+  font-size: 2.5rem;
+  color: #fff;
+  transition: color 0.3s;
+}
+.navbar-wrapper .navbar-link i:hover {
+  color: #000;
+}
+.navbar-wrapper .navbar-link:nth-child(1) {
+  top: 2rem;
+}
+.navbar-wrapper .navbar-link:nth-child(2) {
+  top: 6rem;
+  right: 2rem;
+}
+.navbar-wrapper .navbar-link:nth-child(3) {
+  bottom: 6rem;
+  right: 2rem;
+}
+.navbar-wrapper .navbar-link:nth-child(4) {
+  bottom: 2rem;
+}
+.navbar-wrapper .navbar-link:nth-child(5) {
+  bottom: 6rem;
+  left: 2rem;
+}
+.navbar-wrapper .navbar-link:nth-child(6) {
+  top: 6rem;
+  left: 2rem;
+}
+.navbar-wrapper .navbar-btn {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: #4a69bd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.navbar-wrapper .navbar-btn i {
+  font-size: 2rem;
+  color: #fff;
+  transition: transform 0.5s;
+}
+
+.change .navbar {
+  transform: scale(1) rotate(0deg);
+}
+.change .navbar-btn i {
+  transform: rotate(45deg);
+}
+
+/*# sourceMappingURL=style.css.map */

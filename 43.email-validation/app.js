@@ -1,4 +1,4 @@
-let input = document.getElementById('inputBox');
+const input = document.querySelector('#inputBox');
 
 input.addEventListener('keydown', validate);
 
